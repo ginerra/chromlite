@@ -1,0 +1,191 @@
+/* Chromelite Technologies Limited - shared stylesheet */
+:root {
+  --navy: #003153;
+  --orange: #FF6600;
+  --ink: #1d2a35;
+  --paper: #f5f7f9;
+  --line: #c9d3dc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+/* ---------- Header and navbar ---------- */
+.site-header {
+  background: #ffffff;
+  padding: 16px 24px;
+  border-bottom: 4px solid var(--orange);
+}
+
+.site-header img { display: block; }
+
+.navbar {
+  background: var(--navy);
+  margin: 0;
+  padding: 0 24px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li { display: inline-block; }
+
+.navbar a {
+  display: block;
+  padding: 14px 22px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background: var(--orange);
+  color: #ffffff;
+  outline: none;
+}
+
+/* ---------- Page body ---------- */
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.intro {
+  border-left: 8px solid var(--orange);
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.intro p {
+  margin: 0;
+  max-width: 62ch;
+}
+
+h2.section-title {
+  color: var(--navy);
+  font-size: 1.6rem;
+  margin: 0 0 20px;
+}
+
+/* ---------- Product cards (float, 3 in a row) ---------- */
+.cards { overflow: hidden; }          /* contains the floats */
+
+.card {
+  float: left;
+  width: 31.33%;
+  margin-right: 3%;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-top: 6px solid var(--navy);
+  padding: 22px 20px;
+  min-height: 230px;
+}
+
+.card:last-child { margin-right: 0; }
+
+.card h3 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: 1.2rem;
+}
+
+.card p { margin: 0; }
+
+/* ---------- Pricing table ---------- */
+.table-wrap { overflow-x: auto; }
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.price-table caption {
+  text-align: left;
+  padding: 0 0 10px;
+  font-weight: bold;
+  color: var(--navy);
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.price-table thead th {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+}
+
+.price-table .num { text-align: right; white-space: nowrap; }
+
+.price-table .category {
+  background: #fff1e6;
+  color: var(--navy);
+  font-weight: bold;
+  vertical-align: middle;
+  border-left: 4px solid var(--orange);
+}
+
+.price-table tfoot td { font-weight: bold; }
+
+.price-table tfoot .label { text-align: right; background: var(--paper); }
+
+.price-table tfoot .grand td {
+  background: var(--navy);
+  color: #ffffff;
+  border-color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.note { font-size: 0.9rem; margin-top: 14px; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--navy);
+  color: #ffffff;
+  border-top: 4px solid var(--orange);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.site-footer p { margin: 4px 0; }
+.site-footer .company { font-weight: bold; font-size: 1.1rem; }
+.site-footer a { color: #ffffff; }
+.site-footer a:hover { color: var(--orange); }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 760px) {
+  .card {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+    min-height: 0;
+  }
+  .intro h1 { font-size: 1.7rem; }
+}
